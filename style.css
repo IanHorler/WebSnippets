@@ -1,0 +1,13 @@
+h1 {
+    height: 100px;
+    width: 100dvw;
+    background-color: #585858;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    font-size: 3em;
+    font-weight: bold;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
