@@ -10,4 +10,12 @@ h1 {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+div {
+    padding: 20px;
+}
 
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
