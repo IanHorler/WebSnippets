@@ -45,3 +45,9 @@ h3 {
     font-size: 1em;
     line-height: 1.5;
 }
+
+.monospace-display {
+    font-family: "Courier New", Courier, "Lucida Console", Monaco, monospace;
+    font-size: 1em;
+    line-height: 1.5;
+}
