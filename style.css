@@ -18,7 +18,7 @@ h1 {
     font-size: 3em;
     font-weight: bold;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
 }
 
 p {
@@ -114,4 +114,44 @@ h3 {
 .external-image {
     max-height: 60dvh;
     margin-top: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+
+.navbar ul li a.active {
+    border-top: 2px solid white;
 }
