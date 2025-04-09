@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
-            if (window.scrollY >= sectionTop - sectionHeight / 3) {
+            if (window.scrollY >= (sectionTop - sectionHeight / 3) - 50) {
                 currentSection = section.getAttribute("id");
             }
         });
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (targetElement) {
                 window.scrollTo({
-                    top: targetElement.offsetTop,
+                    top: targetElement.offsetTop - 50,
                     behavior: "smooth"
                 });
                 history.replaceState(null, null, `#${targetId}`);
