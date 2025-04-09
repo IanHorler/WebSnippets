@@ -10,6 +10,19 @@ h1 {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+p {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+a {
+    color: rgb(0, 157, 255);
+    text-decoration: underline;
+}
+
 .description {
     padding: 20px;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -85,4 +98,9 @@ h3 {
     font-family: "Courier New", Courier, "Lucida Console", Monaco, monospace;
     font-size: 1em;
     line-height: 1.5;
+}
+
+.external-image {
+    max-height: 60dvh;
+    margin-top: 20px;
 }
