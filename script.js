@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
-            if (window.scrollY >= (sectionTop - sectionHeight / 3) - 50) {
+            if (window.scrollY >= sectionTop - sectionHeight / 3 - 50) {
                 currentSection = section.getAttribute("id");
             }
         });
@@ -53,6 +53,33 @@ document.addEventListener("DOMContentLoaded", () => {
         currentColor++;
         if (currentColor >= colors.length) {
             currentColor = 0;
+        }
+    });
+
+    const colorElements = document.querySelectorAll(".color");
+
+    colorElements.forEach(element => {
+        const colorNameElement = element.querySelector(".color-code");
+        if (colorNameElement) {
+            const color = colorNameElement.textContent.trim();
+            element.style.backgroundColor = color;
+
+            // Create a darker border color
+            const darkerColor = tinycolor(color).isDark()
+                ? tinycolor(color).lighten(30).toString()
+                : tinycolor(color).darken(30).toString();
+            element.style.border = `1px solid ${darkerColor}`;
+        }
+
+        const colorTextElement = element.querySelector(".color-text");
+        if (colorTextElement) {
+            const colorText = colorTextElement.textContent.trim();
+            element.style.color = colorText;
+        }
+
+        if (colorNameElement && colorTextElement) {
+            const colorText = colorTextElement.textContent.trim();
+            colorNameElement.style.color = colorText;
         }
     });
 });
