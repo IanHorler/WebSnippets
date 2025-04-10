@@ -43,4 +43,16 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
+    const sectionContents = document.querySelectorAll(".section-content");
+    const colors = ["red", "orange", "yellow", "green", "blue", "purple", "pink"];
+    let currentColor = 0;
+
+    sectionContents.forEach(element => {
+        element.classList.add(`sc-${colors[currentColor]}`);
+        currentColor++;
+        if (currentColor >= colors.length) {
+            currentColor = 0;
+        }
+    });
 });
