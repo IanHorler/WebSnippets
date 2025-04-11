@@ -71,6 +71,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 ? tinycolor(color).lighten(30).toString()
                 : tinycolor(color).darken(30).toString();
             element.style.border = `1px solid ${darkerColor}`;
+
+            element.addEventListener("click", () => {
+                navigator.clipboard.writeText(color);
+                const tooltip = document.createElement("span");
+                tooltip.className = "tooltip";
+                tooltip.textContent = `Copied ${color} to clipboard!`;
+                document.body.appendChild(tooltip);
+                setTimeout(() => {
+                    tooltip.remove();
+                }, 2000);
+            });
         }
 
         const colorTextElement = element.querySelector(".color-text");
