@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("nojs").style.display = "none";
+
     const sections = document.querySelectorAll("h2");
     const navLinks = document.querySelectorAll(".navbar ul li a");
 
